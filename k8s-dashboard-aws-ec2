@@ -1,0 +1,29 @@
+"""""""
+we understood that your enviroment k8s is configured
+in other repository show how to setup a enviroment with minikube
+
+"""""""
+
+minikube addons list                  -- see dashboard has enable
+minikube addons enable dashboard      -- case doesnt enable status dashboard
+minikube dashboard --url &            --  show url 
+
+
+http://127.0.0.1:10248/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+
+
+"""
+warning 
+
+pay attention this port whose main idea you will be use it.
+
+"""
+
+ssh -i "key-pair.pem" -L 8081:localhost:46053 ubuntu@ec2-44-444-44-4.compute-1.amazonaws.com  
+
+"""
+warning
+
+key pair and port is very important (-L UPPERCASE) 
+
+second part ubuntu@ec2 is dynamic each time start and stop instance.
