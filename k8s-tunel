@@ -1,0 +1,11 @@
+"""
+
+this easy connect to ssh connect on aws account.
+inside instance ec2 running and key-pair created.
+access a terminal 
+
+warning: dont forget in security group resource aws creante and allow your ip.
+
+""
+ssh -i "key-pair.pem" ubuntu@ec2-54-54-54-444.compute-1.amazonaws.com
+
